@@ -40,7 +40,7 @@ class App extends Component {
     this.setState({
       search: event.target.value,
       flats: this.state.allFlats.filter((flat) =>
-      new RegExp(event.target.value, "i").exec(flat))
+      new RegExp(event.target.value, "i").exec(flat.name))
     });
   }
 
