@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Flat from './components/flat';
 
 class App extends Component {
   render() {
+    const flat = {
+    "name": "Super 60m2 in trendy neighborhood!",
+    "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat3.jpg",
+    "price": 150,
+    "priceCurrency": "EUR",
+    "lat": 48.885312,
+    "lng": 2.341225
+  };
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='app'>
+        <div className='main'>
+          <div className='search'>
+          </div>
+          <div className='flats'>
+          </div>
+        </div>
+        <div className='map'>
+        </div>
       </div>
     );
   }
