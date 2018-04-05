@@ -49,12 +49,14 @@ class App extends Component {
       lat: 48.8566,
       lng: 2.3533
     }
+    let zoom = 11
 
     if (this.state.selectFlat) {
       center = {
         lat: this.state.selectFlat.lat,
         lng: this.state.selectFlat.lng
-      }
+      },
+      zoom = 14
     }
 
     return (
@@ -79,7 +81,7 @@ class App extends Component {
         <div className='map'>
           <GoogleMapReact
             center={center}
-            zoom={12}
+            zoom={zoom}
           >
           {this.state.flats.map((flat) => {
             return <Marker
