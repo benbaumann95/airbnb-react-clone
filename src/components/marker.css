@@ -8,3 +8,8 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+.marker.selected {
+  background-color: yellow;
+  border-color: black;
+}

@@ -11,7 +11,7 @@ import "./flat.css";
 
 class Flat extends React.Component {
   handleClick = () => {
-    this.props.handleClick(this.props.flat)
+    this.props.selectFlat(this.props.flat)
   }
   render() {
     const title = `${this.props.flat.price}
