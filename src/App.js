@@ -26,6 +26,10 @@ class App extends Component {
     })
   }
 
+  selectFlat = (flat) => {
+    console.log(flat);
+  }
+
   render() {
     const center = {
       lat: 48.8566,
@@ -39,7 +43,10 @@ class App extends Component {
           </div>
           <div className='flats'>
             {this.state.flats.map((flat) => {
-              return <Flat key={flat.name} flat={flat} />
+              return <Flat
+                key={flat.name}
+                flat={flat}
+                handleClick={this.selectFlat}/>
             })}
           </div>
         </div>
