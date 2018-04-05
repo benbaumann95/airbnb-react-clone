@@ -20,7 +20,7 @@ class Flat extends React.Component {
     };
 
     return (
-      <div className='flat'>
+      <div className='flat' onClick={}>
         <div className='flat-picture' style={style}></div>
         <div className='flat-title'>
           {title}
