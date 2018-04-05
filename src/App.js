@@ -12,7 +12,9 @@ class App extends Component {
 
     this.state = {
       flats: [],
-      selectFlat: null
+      allFlats: [],
+      selectFlat: null,
+      search: ""
     };
   }
 
@@ -22,7 +24,8 @@ class App extends Component {
       .then(response => response.json())
       .then((data) => {
         this.setState({
-          flats: data
+          flats: data,
+          allFlats: data
       })
     })
   }
@@ -31,6 +34,14 @@ class App extends Component {
     this.setState({
       selectFlat: flat
     })
+  }
+
+  handleSearch = (event) => {
+    this.setState({
+      search: event.target.value,
+      flats: this.state.allFlats.filter((flat) =>
+      new RegExp(event.target.value, "i").exec(flat))
+    });
   }
 
   render() {
